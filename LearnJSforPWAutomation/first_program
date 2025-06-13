@@ -1,0 +1,21 @@
+import { type } from "os"
+
+   var arr1=["Selenium","Cypress","Playwright",35,true]
+  
+   console.log("arr1[2] : "+arr1[2])
+     
+   console.log("type of arr1 : "+typeof(arr1))
+     
+  console.log("type of arr1[3] : "+typeof(arr1[3]),"type of arr1[4] : "+(arr1[4]))
+     
+   console.log("all the array elements are : "+arr1)
+  
+
+  //object
+   const creds={
+
+    username:"Sara",
+    password:"sara123"
+   }
+console.log(creds.password)
+console.log(creds.username)

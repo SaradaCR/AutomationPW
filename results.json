@@ -1,0 +1,175 @@
+{
+  "config": {
+    "configFile": "C:\\SaradaPW\\playwright.config.js",
+    "rootDir": "C:/SaradaPW/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ],
+      [
+        "dot",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/SaradaPW/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/SaradaPW/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/SaradaPW/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/SaradaPW/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/SaradaPW/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/SaradaPW/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.52.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "OHRM_Admin\\jobtitle.spec.js",
+      "file": "OHRM_Admin/jobtitle.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify adding a job title ",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60326,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\SaradaPW\\tests\\OHRM_Admin\\jobtitle.spec.js",
+                        "column": 24,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator(':root')\nExpected string: \u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/admin/\u001b[7mview\u001b[27mJobTitle\u001b[7mList\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"https://opensource-demo.orangehrmlive.com/web/index.php/admin/\u001b[7msave\u001b[27mJobTitle\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveURL with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m    53 × locator resolved to <html>…</html>\u001b[22m\n\u001b[2m       - unexpected value \"https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveJobTitle\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//textarea[@placeholder='Add note']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m  \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewJobTitleList\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\SaradaPW\\tests\\OHRM_Admin\\jobtitle.spec.js:19:24\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-12T09:19:43.677Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_Admin-jobtitle-Verify-adding-a-job-title--chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context",
+                      "contentType": "application/json",
+                      "body": "eyJwYWdlU25hcHNob3QiOiItIGNvbXBsZW1lbnRhcnk6XG4gIC0gbmF2aWdhdGlvbiBcIlNpZGVwYW5lbFwiOlxuICAgIC0gbGluayBcImNsaWVudCBicmFuZCBiYW5uZXJcIjpcbiAgICAgIC0gL3VybDogaHR0cHM6Ly93d3cub3JhbmdlaHJtLmNvbS9cbiAgICAgIC0gaW1nIFwiY2xpZW50IGJyYW5kIGJhbm5lclwiXG4gICAgLSB0ZXh0Ym94IFwiU2VhcmNoXCJcbiAgICAtIGJ1dHRvbiBcIu+KhFwiXG4gICAgLSBzZXBhcmF0b3JcbiAgICAtIGxpc3Q6XG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJBZG1pblwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvYWRtaW4vdmlld0FkbWluTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJQSU1cIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BpbS92aWV3UGltTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJMZWF2ZVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvbGVhdmUvdmlld0xlYXZlTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJUaW1lXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC90aW1lL3ZpZXdUaW1lTW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJSZWNydWl0bWVudFwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvcmVjcnVpdG1lbnQvdmlld1JlY3J1aXRtZW50TW9kdWxlXG4gICAgICAtIGxpc3RpdGVtOlxuICAgICAgICAtIGxpbmsgXCJNeSBJbmZvXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9waW0vdmlld015RGV0YWlsc1xuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiUGVyZm9ybWFuY2VcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL3BlcmZvcm1hbmNlL3ZpZXdQZXJmb3JtYW5jZU1vZHVsZVxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiRGFzaGJvYXJkXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9kYXNoYm9hcmQvaW5kZXhcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkRpcmVjdG9yeVwiOlxuICAgICAgICAgIC0gL3VybDogL3dlYi9pbmRleC5waHAvZGlyZWN0b3J5L3ZpZXdEaXJlY3RvcnlcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIk1haW50ZW5hbmNlXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9tYWludGVuYW5jZS92aWV3TWFpbnRlbmFuY2VNb2R1bGVcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkNsYWltXCI6XG4gICAgICAgICAgLSAvdXJsOiAvd2ViL2luZGV4LnBocC9jbGFpbS92aWV3Q2xhaW1Nb2R1bGVcbiAgICAgICAgICAtIGltZ1xuICAgICAgICAgIC0gdGV4dDogQ2xhaW1cbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkJ1enpcIjpcbiAgICAgICAgICAtIC91cmw6IC93ZWIvaW5kZXgucGhwL2J1enovdmlld0J1enpcbi0gYmFubmVyOlxuICAtIGhlYWRpbmcgXCJBZG1pblwiIFtsZXZlbD02XVxuICAtIGxpbmsgXCJVcGdyYWRlXCI6XG4gICAgLSAvdXJsOiBodHRwczovL29yYW5nZWhybS5jb20vb3Blbi1zb3VyY2UvdXBncmFkZS10by1hZHZhbmNlZFxuICAgIC0gYnV0dG9uIFwiVXBncmFkZVwiXG4gIC0gbGlzdDpcbiAgICAtIGxpc3RpdGVtOlxuICAgICAgLSBpbWcgXCJwcm9maWxlIHBpY3R1cmVcIlxuICAgICAgLSBwYXJhZ3JhcGg6IFRlc3QgODYgTGFzdE5hbWVUZXN0XG4gICAgICAtIHRleHQ6IO+IqVxuICAtIG5hdmlnYXRpb24gXCJUb3BiYXIgTWVudVwiOlxuICAgIC0gbGlzdDpcbiAgICAgIC0gbGlzdGl0ZW06IFVzZXIgTWFuYWdlbWVudCDvioJcbiAgICAgIC0gbGlzdGl0ZW06IEpvYiDvioJcbiAgICAgIC0gbGlzdGl0ZW06IE9yZ2FuaXphdGlvbiDvioJcbiAgICAgIC0gbGlzdGl0ZW06IFF1YWxpZmljYXRpb25zIO+KglxuICAgICAgLSBsaXN0aXRlbTpcbiAgICAgICAgLSBsaW5rIFwiTmF0aW9uYWxpdGllc1wiOlxuICAgICAgICAgIC0gL3VybDogXCIjXCJcbiAgICAgIC0gbGlzdGl0ZW06XG4gICAgICAgIC0gbGluayBcIkNvcnBvcmF0ZSBCcmFuZGluZ1wiOlxuICAgICAgICAgIC0gL3VybDogXCIjXCJcbiAgICAgIC0gbGlzdGl0ZW06IENvbmZpZ3VyYXRpb24g74qCXG4gICAgICAtIGJ1dHRvbiBcIu+ZjlwiXG4tIGhlYWRpbmcgXCJBZGQgSm9iIFRpdGxlXCIgW2xldmVsPTZdXG4tIHNlcGFyYXRvclxuLSB0ZXh0OiBKb2IgVGl0bGUqXG4tIHRleHRib3g6IFBXQXV0b21hdGlvblxuLSB0ZXh0OiBKb2IgRGVzY3JpcHRpb25cbi0gdGV4dGJveCBcIlR5cGUgZGVzY3JpcHRpb24gaGVyZVwiOiBQbGF5d3JpZ2h0IEF1dG9tYXRpb25cbi0gdGV4dDogSm9iIFNwZWNpZmljYXRpb25cbi0gYnV0dG9uIFwiQ2hvb3NlIEZpbGVcIlxuLSB0ZXh0OiBCcm93c2UgTm8gZmlsZSBjaG9zZW4g75iDXG4tIHBhcmFncmFwaDogQWNjZXB0cyB1cCB0byAxTUJcbi0gdGV4dDog75OKIE5vdGVcbi0gdGV4dGJveCBcIkFkZCBub3RlXCI6IE5lZWQgMiB0byA0IHllYXJzIFBsYXl3cmlnaHQgQXV0b21hdGlvbiB0ZXN0ZXJcbi0gc2VwYXJhdG9yXG4tIHBhcmFncmFwaDogXCIqIFJlcXVpcmVkXCJcbi0gYnV0dG9uIFwiQ2FuY2VsXCJcbi0gYnV0dG9uIFwiU2F2ZVwiXG4tIHBhcmFncmFwaDogT3JhbmdlSFJNIE9TIDUuN1xuLSBwYXJhZ3JhcGg6XG4gIC0gdGV4dDogwqkgMjAwNSAtIDIwMjVcbiAgLSBsaW5rIFwiT3JhbmdlSFJNLCBJbmNcIjpcbiAgICAtIC91cmw6IGh0dHA6Ly93d3cub3JhbmdlaHJtLmNvbVxuICAtIHRleHQ6IC4gQWxsIHJpZ2h0cyByZXNlcnZlZC4ifQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "059c4a0fb9d20859eb03-c229765e5a46aa1b8c5b",
+          "file": "OHRM_Admin/jobtitle.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-06-12T09:19:41.740Z",
+    "duration": 62399.073000000004,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

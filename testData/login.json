@@ -1,0 +1,18 @@
+
+{
+    "username1" : "standard_user",
+    "password1" : "secret_sauce",
+
+    "username2" : "standard_user1",
+    "password2" : "secret_sauce",
+
+    "username3":"standard_user",
+    "password3": "secret_sauce1",
+
+    "username4":"standard_user1",
+    "password4": "secret_sauce1",
+
+    "username5":"Admin",
+    "password5": "admin123"
+
+}
