@@ -94,14 +94,14 @@
   },
   "suites": [
     {
-      "title": "OHRM_Admin\\jobtitle.spec.js",
-      "file": "OHRM_Admin/jobtitle.spec.js",
+      "title": "OHRM_Admin\\pimcheckbox.spec.js",
+      "file": "OHRM_Admin/pimcheckbox.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Verify adding a job title ",
-          "ok": true,
+          "title": "Verify adding a paygrade ",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -112,25 +112,55 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 15,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 17615,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 8728,
+                  "error": {
+                    "message": "ReferenceError: arr is not defined",
+                    "stack": "ReferenceError: arr is not defined\n    at C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js:11:8",
+                    "location": {
+                      "file": "C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js",
+                      "column": 8,
+                      "line": 11
+                    },
+                    "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[contains(.,'Login')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@class='oxd-main-menu-item active']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     arr\u001b[33m=\u001b[39m[\u001b[32m'input[value=\"1\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"4\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"7\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"8\"]'\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m i\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mi\u001b[33m<\u001b[39m arr\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39mi\u001b[33m++\u001b[39m)\n \u001b[90m 13 |\u001b[39m     {\n \u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(arr(i))\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js",
+                        "column": 8,
+                        "line": 11
+                      },
+                      "message": "ReferenceError: arr is not defined\n\n\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[contains(.,'Login')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@class='oxd-main-menu-item active']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     arr\u001b[33m=\u001b[39m[\u001b[32m'input[value=\"1\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"4\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"7\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"8\"]'\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m i\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mi\u001b[33m<\u001b[39m arr\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39mi\u001b[33m++\u001b[39m)\n \u001b[90m 13 |\u001b[39m     {\n \u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(arr(i))\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js:11:8\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-13T08:07:13.287Z",
+                  "startTime": "2025-06-16T05:37:37.413Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_Admin-pimcheckbox-Verify-adding-a-paygrade--chromium\\test-failed-1.png"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js",
+                    "column": 8,
+                    "line": 11
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "059c4a0fb9d20859eb03-c229765e5a46aa1b8c5b",
-          "file": "OHRM_Admin/jobtitle.spec.js",
-          "line": 3,
+          "id": "9f3f1d66f8b4276321e1-a19416b3f7989246dffa",
+          "file": "OHRM_Admin/pimcheckbox.spec.js",
+          "line": 4,
           "column": 5
         }
       ]
@@ -138,11 +168,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-13T08:07:11.278Z",
-    "duration": 19981.201,
-    "expected": 1,
+    "startTime": "2025-06-16T05:37:35.796Z",
+    "duration": 10886.4280000031,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
