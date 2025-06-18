@@ -1,7 +1,7 @@
 
 import {test,expect} from '@playwright/test';
 
-test("Verify adding a paygrade ", async({page})=>{
+test("Verify checking the  check box ", async({page})=>{
 
  await page.goto("web/index.php/auth/login");
     await page.locator("//input[@placeholder='Username']").fill(process.env.ORNG_USERNAME);

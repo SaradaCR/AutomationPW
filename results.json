@@ -88,19 +88,19 @@
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "3way",
-    "version": "1.52.0",
+    "version": "1.53.0",
     "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "OHRM_Admin\\pimcheckbox.spec.js",
-      "file": "OHRM_Admin/pimcheckbox.spec.js",
+      "title": "OHRM_PIM\\addemployeeddt.spec.js",
+      "file": "OHRM_PIM/addemployeeddt.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Verify adding a paygrade ",
+          "title": "Verify adding Employees -DDT- employee1",
           "ok": false,
           "tags": [],
           "tests": [
@@ -112,55 +112,198 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 15,
+                  "workerIndex": 19,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 8728,
+                  "duration": 9202,
                   "error": {
-                    "message": "ReferenceError: arr is not defined",
-                    "stack": "ReferenceError: arr is not defined\n    at C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js:11:8",
+                    "message": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n",
+                    "stack": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n\n    at C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js:44:129",
                     "location": {
-                      "file": "C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js",
-                      "column": 8,
-                      "line": 11
+                      "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                      "column": 129,
+                      "line": 44
                     },
-                    "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[contains(.,'Login')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@class='oxd-main-menu-item active']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     arr\u001b[33m=\u001b[39m[\u001b[32m'input[value=\"1\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"4\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"7\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"8\"]'\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m i\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mi\u001b[33m<\u001b[39m arr\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39mi\u001b[33m++\u001b[39m)\n \u001b[90m 13 |\u001b[39m     {\n \u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(arr(i))\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Employee Id']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployees\u001b[39m[employee]\u001b[33m.\u001b[39meId)\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[@type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m })\n \u001b[90m 47 |\u001b[39m }\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js",
-                        "column": 8,
-                        "line": 11
+                        "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                        "column": 129,
+                        "line": 44
                       },
-                      "message": "ReferenceError: arr is not defined\n\n\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[contains(.,'Login')]\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[@class='oxd-main-menu-item active']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     arr\u001b[33m=\u001b[39m[\u001b[32m'input[value=\"1\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"4\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"7\"]'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'input[value=\"8\"]'\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m i\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mi\u001b[33m<\u001b[39m arr\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39mi\u001b[33m++\u001b[39m)\n \u001b[90m 13 |\u001b[39m     {\n \u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(arr(i))\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js:11:8\u001b[22m"
+                      "message": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Employee Id']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployees\u001b[39m[employee]\u001b[33m.\u001b[39meId)\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[@type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m })\n \u001b[90m 47 |\u001b[39m }\u001b[0m\n\u001b[2m    at C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js:44:129\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-16T05:37:37.413Z",
+                  "startTime": "2025-06-18T15:31:29.805Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\SaradaPW\\test-results\\OHRM_Admin-pimcheckbox-Verify-adding-a-paygrade--chromium\\test-failed-1.png"
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_PIM-addemployeeddt-Ve-2ee8d-g-Employees--DDT--employee1-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_PIM-addemployeeddt-Ve-2ee8d-g-Employees--DDT--employee1-chromium\\error-context.md"
                     }
                   ],
                   "errorLocation": {
-                    "file": "C:\\SaradaPW\\tests\\OHRM_Admin\\pimcheckbox.spec.js",
-                    "column": 8,
-                    "line": 11
+                    "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                    "column": 129,
+                    "line": 44
                   }
                 }
               ],
               "status": "unexpected"
             }
           ],
-          "id": "9f3f1d66f8b4276321e1-a19416b3f7989246dffa",
-          "file": "OHRM_Admin/pimcheckbox.spec.js",
-          "line": 4,
+          "id": "995bf5ce799d8482ea75-f3af143cd09fd449d68d",
+          "file": "OHRM_PIM/addemployeeddt.spec.js",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "Verify adding Employees -DDT- employee2",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 20,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8177,
+                  "error": {
+                    "message": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n",
+                    "stack": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n\n    at C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js:44:129",
+                    "location": {
+                      "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                      "column": 129,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Employee Id']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployees\u001b[39m[employee]\u001b[33m.\u001b[39meId)\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[@type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m })\n \u001b[90m 47 |\u001b[39m }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                        "column": 129,
+                        "line": 44
+                      },
+                      "message": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Employee Id']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployees\u001b[39m[employee]\u001b[33m.\u001b[39meId)\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[@type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m })\n \u001b[90m 47 |\u001b[39m }\u001b[0m\n\u001b[2m    at C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js:44:129\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-18T15:31:40.015Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_PIM-addemployeeddt-Ve-3d4a2-g-Employees--DDT--employee2-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_PIM-addemployeeddt-Ve-3d4a2-g-Employees--DDT--employee2-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                    "column": 129,
+                    "line": 44
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "995bf5ce799d8482ea75-1ae1027c49b8f9ed8513",
+          "file": "OHRM_PIM/addemployeeddt.spec.js",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "Verify adding Employees -DDT- employee3",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 21,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8343,
+                  "error": {
+                    "message": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n",
+                    "stack": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n\n    at C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js:44:129",
+                    "location": {
+                      "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                      "column": 129,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Employee Id']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployees\u001b[39m[employee]\u001b[33m.\u001b[39meId)\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[@type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m })\n \u001b[90m 47 |\u001b[39m }\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                        "column": 129,
+                        "line": 44
+                      },
+                      "message": "Error: expect.toBeVisible: Unexpected token \"/\" while parsing css selector \"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3600000ms\u001b[22m\n\u001b[2m  - waiting for https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\u001b[22m\n\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//label[normalize-space(text())='Employee Id']/following::input)[1]\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mEmployees\u001b[39m[employee]\u001b[33m.\u001b[39meId)\u001b[33m;\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[@type='submit']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m })\n \u001b[90m 47 |\u001b[39m }\u001b[0m\n\u001b[2m    at C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js:44:129\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-06-18T15:31:49.022Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_PIM-addemployeeddt-Ve-d4d13-g-Employees--DDT--employee3-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\SaradaPW\\test-results\\OHRM_PIM-addemployeeddt-Ve-d4d13-g-Employees--DDT--employee3-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\SaradaPW\\tests\\OHRM_PIM\\addemployeeddt.spec.js",
+                    "column": 129,
+                    "line": 44
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "995bf5ce799d8482ea75-28ffc659d8c4e2b31504",
+          "file": "OHRM_PIM/addemployeeddt.spec.js",
+          "line": 29,
           "column": 5
         }
       ]
@@ -168,11 +311,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-16T05:37:35.796Z",
-    "duration": 10886.4280000031,
+    "startTime": "2025-06-18T15:31:28.415Z",
+    "duration": 29036.682000003755,
     "expected": 0,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 3,
     "flaky": 0
   }
 }
