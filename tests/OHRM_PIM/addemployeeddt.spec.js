@@ -39,7 +39,7 @@ test(`Verify adding Employees -DDT- ${employee}`, async({page})=>{
     await page.locator("//input[@placeholder='First Name']").fill(Employees[employee].fName);
     await page.locator("//input[@placeholder='Middle Name']").fill(Employees[employee].mName);
     await page.locator("//input[@placeholder='Last Name']").fill(Employees[employee].lName);
-   // await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill(Employees[employee].eId);
+    await page.locator("(//label[normalize-space(text())='Employee Id']/following::input)[1]").fill(Employees[employee].eId);
     await page.locator("//button[@type='submit']").click();
    // await expect(page.locator("https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/288")).toBeVisible();
  

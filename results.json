@@ -94,13 +94,13 @@
   },
   "suites": [
     {
-      "title": "OHRM_PIM\\addemployeeddt.spec.js",
-      "file": "OHRM_PIM/addemployeeddt.spec.js",
+      "title": "OHRM_Admin\\addskillddt.spec.js",
+      "file": "OHRM_Admin/addskillddt.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Verify adding Employees -DDT- employee1",
+          "title": "verify adding skill -DDT-skill1",
           "ok": true,
           "tags": [],
           "tests": [
@@ -112,15 +112,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 31,
+                  "workerIndex": 32,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9455,
+                  "duration": 14333,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-18T15:40:48.648Z",
+                  "startTime": "2025-06-18T16:32:14.237Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -128,13 +128,13 @@
               "status": "expected"
             }
           ],
-          "id": "995bf5ce799d8482ea75-f3af143cd09fd449d68d",
-          "file": "OHRM_PIM/addemployeeddt.spec.js",
-          "line": 29,
+          "id": "3462b7b29f42af7c123d-db7851c914f29242ceeb",
+          "file": "OHRM_Admin/addskillddt.spec.js",
+          "line": 21,
           "column": 5
         },
         {
-          "title": "Verify adding Employees -DDT- employee2",
+          "title": "verify adding skill -DDT-skill2",
           "ok": true,
           "tags": [],
           "tests": [
@@ -146,15 +146,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 31,
+                  "workerIndex": 32,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8506,
+                  "duration": 17047,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-18T15:40:58.349Z",
+                  "startTime": "2025-06-18T16:32:28.824Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -162,13 +162,13 @@
               "status": "expected"
             }
           ],
-          "id": "995bf5ce799d8482ea75-1ae1027c49b8f9ed8513",
-          "file": "OHRM_PIM/addemployeeddt.spec.js",
-          "line": 29,
+          "id": "3462b7b29f42af7c123d-37f636bb3f71de62a3bd",
+          "file": "OHRM_Admin/addskillddt.spec.js",
+          "line": 21,
           "column": 5
         },
         {
-          "title": "Verify adding Employees -DDT- employee3",
+          "title": "verify adding skill -DDT-skill3",
           "ok": true,
           "tags": [],
           "tests": [
@@ -180,15 +180,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 31,
+                  "workerIndex": 32,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8003,
+                  "duration": 19284,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-06-18T15:41:06.871Z",
+                  "startTime": "2025-06-18T16:32:45.882Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -196,9 +196,9 @@
               "status": "expected"
             }
           ],
-          "id": "995bf5ce799d8482ea75-28ffc659d8c4e2b31504",
-          "file": "OHRM_PIM/addemployeeddt.spec.js",
-          "line": 29,
+          "id": "3462b7b29f42af7c123d-f818638a5cdf6523976a",
+          "file": "OHRM_Admin/addskillddt.spec.js",
+          "line": 21,
           "column": 5
         }
       ]
@@ -206,8 +206,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-18T15:40:47.254Z",
-    "duration": 27669.04399999976,
+    "startTime": "2025-06-18T16:32:12.850Z",
+    "duration": 52356.6950000003,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,
